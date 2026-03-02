@@ -1,0 +1,277 @@
+/* ─── Navbar ─────────────────────────────────────── */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 5%;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.navbar.glass {
+    padding: 1rem 5%;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    z-index: 1100;
+}
+
+.logo span {
+    color: var(--accent-color);
+}
+
+/* ─── Desktop Nav Links ──────────────────────────── */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: var(--text-primary);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.theme-toggle {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--text-primary);
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background: var(--accent-color);
+    color: white;
+    transform: rotate(15deg) scale(1.1);
+    box-shadow: 0 0 15px var(--accent-color);
+}
+
+.sun-icon {
+    color: #fbbf24;
+}
+
+.moon-icon {
+    color: #6366f1;
+}
+
+.theme-toggle:hover .sun-icon,
+.theme-toggle:hover .moon-icon {
+    color: white;
+}
+
+/* ─── Hamburger Button ───────────────────────────── */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1100;
+    padding: 8px;
+    background: rgba(99, 102, 241, 0.15);
+    border: 1.5px solid rgba(99, 102, 241, 0.4);
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+.hamburger:hover {
+    background: rgba(99, 102, 241, 0.28);
+}
+
+.bar {
+    width: 22px;
+    height: 2.5px;
+    background-color: var(--text-primary);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+/* ─── Dim Overlay ────────────────────────────────── */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 1050;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+/* ─── Side Drawer ────────────────────────────────── */
+.nav-drawer {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background: var(--bg-color);
+    background-image: var(--bg-gradient);
+    border-left: 1px solid var(--glass-border);
+    box-shadow: -8px 0 40px rgba(0, 0, 0, 0.3);
+    z-index: 1060;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    transition: right 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-drawer.active {
+    right: 0;
+}
+
+/* Drawer Header */
+.nav-drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 1.6rem;
+    border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.nav-drawer-title {
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: var(--accent-hover);
+    text-transform: uppercase;
+}
+
+.nav-drawer-close {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(99, 102, 241, 0.5);
+    background: rgba(99, 102, 241, 0.1);
+    color: #e2e8f0;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.nav-drawer-close:hover {
+    background: rgba(99, 102, 241, 0.25);
+    border-color: var(--accent-color);
+}
+
+/* Drawer Nav Links */
+.nav-drawer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    padding: 2rem 1.4rem;
+}
+
+/* Capsule-style buttons */
+.nav-drawer-item {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.85rem 1.4rem;
+    border-radius: 50px;
+    border: 1.5px solid rgba(99, 102, 241, 0.35);
+    background: rgba(99, 102, 241, 0.07);
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.nav-drawer-item:hover {
+    background: rgba(99, 102, 241, 0.2);
+    border-color: var(--accent-color);
+    transform: translateX(4px);
+    color: var(--text-primary);
+}
+
+.nav-drawer-emoji {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+/* ─── Mobile Breakpoint ──────────────────────────── */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-overlay {
+        display: block;
+    }
+
+    .nav-overlay.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-drawer {
+        width: 88%;
+    }
+}

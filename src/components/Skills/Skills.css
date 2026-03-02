@@ -1,0 +1,140 @@
+.skills-section {
+    position: relative;
+    z-index: 2;
+}
+
+.skills-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skills-heading {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.15);
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+}
+
+.skill-item:hover .react {
+    color: #61dafb;
+}
+
+.skill-item:hover .node {
+    color: #339933;
+}
+
+.skill-item:hover .express {
+    color: #ffffff;
+}
+
+.skill-item:hover .mongo {
+    color: #47a248;
+}
+
+.skill-item:hover .chakra {
+    color: #319795;
+}
+
+.skill-item:hover .database {
+    color: #f29111;
+}
+
+.skill-item:hover .redux {
+    color: #764abc;
+}
+
+.skill-item:hover .html {
+    color: #e34f26;
+}
+
+.skill-item:hover .css {
+    color: #1572b6;
+}
+
+.skill-item:hover .js {
+    color: #f7df1e;
+}
+
+.skill-item:hover .github {
+    color: #ffffff;
+}
+
+.skill-item:hover .vscode {
+    color: #007acc;
+}
+
+.skill-item span {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+        gap: 1rem;
+    }
+
+    .skill-item {
+        padding: 1.2rem 0.8rem;
+    }
+
+    .skill-icon {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.8rem;
+    }
+
+    .skill-item {
+        padding: 1rem 0.5rem;
+    }
+
+    .skill-icon {
+        font-size: 1.8rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .skill-item span {
+        font-size: 0.8rem;
+    }
+
+    .skills-heading {
+        font-size: 1.5rem;
+    }
+}
