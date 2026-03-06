@@ -57,6 +57,14 @@ const Projects = () => {
             liveLink: "https://currency-converter-sch3.onrender.com/",
             codeLink: "https://github.com/MohitSalvi2207/Currency-Converter",
             tags: ["React", "Exchange Rate API", "CSS"]
+        },
+        {
+            id: 7,
+            title: "Employee Management System",
+            description: "A full-stack MERN application for managing employees with features like CRUD operations, JWT authentication, role-based access, and a fully responsive dashboard.",
+            liveLink: "https://employeemanagementsystem-zeta-six.vercel.app/login",
+            codeLink: "https://github.com/MohitSalvi2207/ems-frontend.git",
+            tags: ["React", "Node.js", "MongoDB", "Express"]
         }
     ];
 
