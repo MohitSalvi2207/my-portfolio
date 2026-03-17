@@ -12,6 +12,22 @@ const Projects = () => {
     const projects = [
         {
             id: 1,
+            title: "Employee Management System",
+            description: "A full-stack MERN application for managing employees with features like CRUD operations, JWT authentication, role-based access, and a fully responsive dashboard.",
+            liveLink: "https://employeemanagementsystem-zeta-six.vercel.app/login",
+            codeLink: "https://github.com/MohitSalvi2207/ems-frontend.git",
+            tags: ["React", "Node.js", "MongoDB", "Express"]
+        },
+        {
+            id: 2,
+            title: "Eco-Track Sustainable Marketplace",
+            description: "A sustainable marketplace platform where every purchase tracks your environmental impact. Discover eco-friendly products and monitor sustainability metrics like CO2 tracked and trees saved.",
+            liveLink: "https://front-end-sooty-pi.vercel.app/",
+            codeLink: "https://github.com/MohitSalvi2207/Eco-Track",
+            tags: ["React", "Tailwind CSS", "Lucide React", "Vercel"]
+        },
+        {
+            id: 3,
             title: "ShopEase",
             description: "Developed a full-featured e-commerce app with CRUD, authentication, and cart management. Integrated third-party APIs, Bootstrap UI, and real-time updates.",
             liveLink: "https://comfy-palmier-76ae74.netlify.app/",
@@ -19,7 +35,7 @@ const Projects = () => {
             tags: ["React", "Bootstrap", "API", "Auth"]
         },
         {
-            id: 2,
+            id: 4,
             title: "StreamView",
             description: "Built a responsive UI like YouTube. Includes dynamic search, video fetching, and a custom player with full controls.",
             liveLink: "https://streamview-6nz0.onrender.com/",
@@ -27,7 +43,7 @@ const Projects = () => {
             tags: ["HTML", "CSS", "Vanilla JS", "API"]
         },
         {
-            id: 3,
+            id: 5,
             title: "IntelliQuiz",
             description: "Interactive quiz web app with MCQs, score tracking, and instant feedback. Designed for engaging learning with a clean interface.",
             liveLink: null,
@@ -35,7 +51,7 @@ const Projects = () => {
             tags: ["React", "JavaScript", "CSS"]
         },
         {
-            id: 4,
+            id: 6,
             title: "Weather App",
             description: "Provides real-time weather updates based on the user's city name, area, or pincode input. Features a clean UI and error handling.",
             liveLink: "https://weather-app-6irr.onrender.com/",
@@ -43,7 +59,7 @@ const Projects = () => {
             tags: ["React", "Weather API", "CSS"]
         },
         {
-            id: 5,
+            id: 7,
             title: "Text to Speech Converter",
             description: "A simple Text to Speech Converter using the Web Speech API to read text aloud in different voices and languages with speed controls.",
             liveLink: "https://text-to-speech-converter-ohuy.onrender.com/",
@@ -51,20 +67,12 @@ const Projects = () => {
             tags: ["HTML", "CSS", "Web Speech API"]
         },
         {
-            id: 6,
+            id: 8,
             title: "Currency-Converter",
             description: "Responsive web app to convert currencies in real-time. Features flag-based dropdowns, live exchange rates, and a one-click swap button.",
             liveLink: "https://currency-converter-sch3.onrender.com/",
             codeLink: "https://github.com/MohitSalvi2207/Currency-Converter",
             tags: ["React", "Exchange Rate API", "CSS"]
-        },
-        {
-            id: 7,
-            title: "Employee Management System",
-            description: "A full-stack MERN application for managing employees with features like CRUD operations, JWT authentication, role-based access, and a fully responsive dashboard.",
-            liveLink: "https://employeemanagementsystem-zeta-six.vercel.app/login",
-            codeLink: "https://github.com/MohitSalvi2207/ems-frontend.git",
-            tags: ["React", "Node.js", "MongoDB", "Express"]
         }
     ];
 
