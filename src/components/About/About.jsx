@@ -66,9 +66,9 @@ const About = () => {
                     <p>
                         During my internship, I contributed to a Printing ERP System, building responsive front-end modules using Chakra UI and backend functionalities using a CRUD Generator library. This strengthened my understanding of enterprise workflows, modular architecture, and seamless data integration.
                     </p>
-                    {/* <p>
+                    <p>
                         I am committed to writing clean, maintainable code and continuously improving my technical skills to support the creation of high-quality digital products that deliver measurable value.
-                    </p> */}
+                    </p>
                 </div>
             </div>
         </section>
